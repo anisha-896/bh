@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+</head>
+
+<body>
+  <a-scene background="color:gray">
+
+    <a-camera wasd-controls-enabled="false" position="0 8 20"></a-camera>
+
+    <!-------------------------------------------Asset Management------------------------------------------->
+    <a-assets>      
+
+      <a-asset-item id="table-obj" src="./models/obj/CoffeeTableModel/tinker.obj"></a-asset-item>
+      <a-asset-item id="table-mtl" src="./models/obj/CoffeeTableModel/obj.mtl"></a-asset-item>
+
+      <a-asset-item id="dress-obj" src="./models/dressingtable/tinker.obj"></a-asset-item>
+      <a-asset-item id="dress-mtl" src="./models/dressingtable/obj.mtl"></a-asset-item>
+
+      <a-asset-item id="side-obj" src="./models/obj/SideTable/tinker.obj"></a-asset-item>
+      <a-asset-item id="side-mtl" src="./models/obj/SideTable/obj.mtl"></a-asset-item>
+
+      <a-asset-item id="side2-obj" src="./models/obj/SideTable/tinker.obj"></a-asset-item>
+      <a-asset-item id="side2-mtl" src="./models/obj/SideTable/obj.mtl"></a-asset-item>
+
+      <a-asset-item id="bed-obj" src="./models/obj/bed/tinker.obj"></a-asset-item>
+      <a-asset-item id="bed-mtl" src="./models/obj/bed/obj.mtl"></a-asset-item>
+
+      <a-asset-item id="sofa-obj" src="./models/obj/sofa/tinker.obj"></a-asset-item>
+      <a-asset-item id="sofa-mtl" src="./models/obj/sofa/obj.mtl"></a-asset-item>
+
+      <a-asset-item id="table-gltf" src="./models/gltf/CoffeeTableModel.glb"></a-asset-item>
+      
+    </a-assets>
+    
+    
+    <!-------------------------------------Circular Plane----------------------------------------------->
+    
+    <a-circle id="floor" position="-0.4 -0.76 -25" rotation="-90 0 0" radius="100" shadow="receive: true" visible="true"
+      color="white">
+    </a-circle>
+    
+  
+    <!-------------------------------------Room Walls----------------------------------------------->
+    <a-entity >
+
+      <!--BACK-->
+      <a-box color="pink" position="0.076 -4 -39" width="50" height="50">
+      </a-box>
+      <!--RIGHT-->
+      <a-box color="purple" rotation="0 -90 0" position="25.5 -2.9 -15" width="50" height="50">
+      </a-box>
+      <!--LEFT-->
+      <a-box color="purple" rotation="0 -90 0" position="-25.9 -3.4 -15" width="50" height="50">
+      </a-box>
+      <!--TOP-->
+      <a-box color="white" rotation="90 0 0" position="0 21.4 -15" width="50" height="50">
+      </a-box>
+
+    </a-entity>
+    
+    <!--------------------------------------OBJ Models----------------------------------------------------------->   
+  
+    <a-entity obj-model="obj: #table-obj; mtl: #table-mtl"  position="-1 0 -25" rotation="-90 0 0" scale="0.1 0.1 0.1 "
+    ></a-entity>
+
+    <a-entity obj-model="obj: #side-obj; mtl: #side-mtl"  position="14 0 -25" rotation="-90 0 0" scale="0.1 0.1 0.1 "
+    ></a-entity>
+
+    <a-entity obj-model="obj: #side2-obj; mtl: #side2-mtl"  position="8 0 -25" rotation="-90 0 0" scale="0.1 0.1 0.1 "
+    ></a-entity>
+
+    <a-entity obj-model="obj: #bed-obj; mtl: #bed-mtl"  position="-15 0 -11" rotation="-90 0 0" scale="0.1 0.1 0.1 "
+    ></a-entity>
+
+    <a-entity obj-model="obj: #sofa-obj; mtl: #sofa-mtl"  position="12 0 -1" rotation="-90 0 0" scale="0.1 0.1 0.1 "
+    ></a-entity>
+
+    <a-entity obj-model="obj: #dress-obj; mtl: #dress-mtl"  position="-15 0 2" rotation="-90 0 0" scale="0.1 0.1 0.1 "
+    ></a-entity>
+
+  </a-scene>
+</body>
+
+</html>
